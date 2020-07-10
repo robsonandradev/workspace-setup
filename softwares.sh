@@ -11,11 +11,12 @@ sudo apt install -y \
   kubuntu-desktop \
   linux-headers-generic \
   net-tools \
+  nodejs \
   python-pip \
   spotify-client \
   ubuntu-restricted-extras \
   vim \
-  zsh 
+  zsh
 
 curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 curl -fsSL https://get.docker.com/ | sh
@@ -26,4 +27,5 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.20.1/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 
 curl -sS https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb | sudo dpkg -i -
+
 
