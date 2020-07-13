@@ -12,11 +12,10 @@ RUN apt update -y && apt install -y \
   build-essential \
   curl \
   git \
-  wget \
   vim \
   zsh
 
-COPY vim-setup.sh coc-package.json ./
+COPY vim-setup.sh vimrc coc-package.json ./
 
 RUN curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - \
   && sh -c "echo 'deb https://deb.nodesource.com/node_12.x focal main' > \
@@ -25,9 +24,9 @@ RUN curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add
   && curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh \
   && bash vim-setup.sh \
   && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
-  && mv zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins
+  && mv zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins \
+  && apt clean
 
 COPY zshrc .zshrc
 
-CMD ["zsh"]
 

@@ -16,10 +16,7 @@ mkdir -p $EDITOR_CONFIG_HOME
 mkdir -p $NERD_TREE_HOME
 
 echo "Setting vim commands"
-echo 'set number'     >> ~/.vimrc
-echo 'set ignorecase' >> ~/.vimrc
-echo 'autocmd vimenter * NERDTree' >> ~/.vimrc
-echo 'map <C-n> :NERDTreeToggle<CR>' >> ~/.vimrc
+mv vimrc ~/.vimrc
 mkdir -p $COC_EXTENSION_HOME
 
 cd $COC_HOME
