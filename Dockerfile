@@ -30,3 +30,5 @@ COPY zshrc .zshrc
 COPY vimrc .vimrc
 RUN bash vim-setup.sh
 
+CMD ["zsh"]
+

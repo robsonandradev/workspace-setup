@@ -1,0 +1,12 @@
+version: '3.0'
+services:
+  development:
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/code
+    stdin_open: true
+    tty: true
+    hostname: 'development'
+
