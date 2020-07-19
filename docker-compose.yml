@@ -5,7 +5,8 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./:/code
+      - ./:/config
+      - ~/projetos/pd/:/code
     stdin_open: true
     tty: true
     hostname: 'development'
