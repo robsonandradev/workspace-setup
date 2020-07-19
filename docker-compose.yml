@@ -1,4 +1,4 @@
-version: '3.0'
+version: '3.3'
 services:
   development:
     build: .
@@ -7,7 +7,12 @@ services:
     volumes:
       - ./:/config
       - ~/projetos/pd/:/code
+    secrets:
+      - host_ssh_key
     stdin_open: true
     tty: true
     hostname: 'development'
 
+secrets:
+  host_ssh_key:
+    file: ~/.ssh/key
