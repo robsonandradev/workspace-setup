@@ -20,6 +20,7 @@ set incsearch
 
 autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
+map <C-w> :w<CR>
 
 " Give more space for displaying messages.
 set cmdheight=2
