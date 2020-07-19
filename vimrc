@@ -46,6 +46,7 @@ Plug 'vim-utils/vim-man'
 Plug 'lyuts/vim-rtags'
 Plug 'kien/ctrlp.vim'
 Plug 'mbbill/undotree'
+Plug 'gruvbox-community/gruvbox'
 
 call plug#end()
 
