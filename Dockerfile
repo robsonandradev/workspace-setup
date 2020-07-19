@@ -29,9 +29,6 @@ RUN curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add
 COPY zshrc .zshrc
 COPY vimrc .vimrc
 
-RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 RUN mkdir -p ~/.vim/undodir && bash vim-setup.sh
 
 CMD ["zsh"]

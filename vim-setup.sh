@@ -42,3 +42,6 @@ echo 'Installing editorconfig'
 git clone https://github.com/editorconfig/editorconfig-vim.git
 mv editorconfig-vim $EDITOR_CONFIG_HOME
 
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
