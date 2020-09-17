@@ -15,6 +15,9 @@ mkdir -p $COC_HOME
 mkdir -p $EDITOR_CONFIG_HOME
 mkdir -p $NERD_TREE_HOME
 
+echo "Copy vimrc to home"
+cp vimrc ~/.vimrc
+
 echo "Setting vim commands"
 mkdir -p $COC_EXTENSION_HOME
 

@@ -18,7 +18,7 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 map <C-w> :w<CR>
 

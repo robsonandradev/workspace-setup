@@ -3,6 +3,6 @@
 chmod +x *.sh
 
 bash ./repositories.sh
-bash ./install.sh
+bash ./softwares.sh
 bash ./vim-setup.sh
 
