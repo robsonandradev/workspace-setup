@@ -10,13 +10,14 @@ set shiftwidth=2
 set expandtab
 set smartindent
 " set nu
-set nowrap
+" set nowrap
 set smartcase
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set encoding=utf-8
 
 " autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -47,6 +48,7 @@ Plug 'lyuts/vim-rtags'
 Plug 'kien/ctrlp.vim'
 Plug 'mbbill/undotree'
 Plug 'gruvbox-community/gruvbox'
+Plug 'w0rp/ale'
 
 call plug#end()
 
@@ -112,3 +114,13 @@ endfun
 autocmd BufWritePre * :call TrimWhitespace()
 autocmd FileType typescript :call GoYCM()
 autocmd FileType cpp,cxx,h,hpp,c :call GoCoc()
+
+let g:ale_fixers = {
+ \ '*': ['trim_whitespace'],
+ \ 'javascript': ['eslint']
+ \ }
+
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+
+let g:ale_fix_on_save = 1
