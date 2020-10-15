@@ -49,6 +49,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'mbbill/undotree'
 Plug 'gruvbox-community/gruvbox'
 Plug 'w0rp/ale'
+Plug 'storyn26383/vim-vue'
 
 call plug#end()
 
