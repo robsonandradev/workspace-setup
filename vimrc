@@ -183,4 +183,4 @@ function! SyncTree()
 endfunction
 
 " Highlight currently open buffer in NERDTree
-autocmd vimenter * call SyncTree()
+autocmd BufEnter * call SyncTree()
