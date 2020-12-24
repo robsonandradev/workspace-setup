@@ -15,7 +15,7 @@ sudo apt install -y \
   python-pip \
   spotify-client \
   ubuntu-restricted-extras \
-  vim \
+  neovim \
   zsh
 
 curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
@@ -28,4 +28,4 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 curl -sS https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb | sudo dpkg -i -
 
-
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git

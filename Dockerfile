@@ -27,7 +27,7 @@ RUN curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add
   && apt clean
 
 COPY zshrc .zshrc
-COPY vimrc .vimrc
+COPY vimrc coc-settings.json ./
 
 RUN mkdir -p ~/.vim/undodir && bash vim-setup.sh
 
