@@ -2,7 +2,7 @@
 
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y \
-  apt-transport-https
+  apt-transport-https \
   build-essential \
   code \
   curl \
@@ -12,8 +12,9 @@ sudo apt install -y \
   linux-headers-generic \
   net-tools \
   nodejs \
-  python-pip \
-  spotify-client \
+  software-properties-common \
+  python-pip-whl \
+  # spotify-client \
   ubuntu-restricted-extras \
   neovim \
   zsh
