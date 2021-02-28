@@ -13,11 +13,12 @@ sudo apt install -y \
   net-tools \
   nodejs \
   software-properties-common \
-  python-pip-whl \
-  # spotify-client \
+  python3-pip \
   ubuntu-restricted-extras \
   neovim \
   zsh
+
+snap install spotify
 
 curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 curl -fsSL https://get.docker.com/ | sh
