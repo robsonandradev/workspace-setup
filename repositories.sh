@@ -2,6 +2,8 @@
 
 sudo apt install curl -y
 
+sudo apt-add-repository universe
+
 sudo add-apt-repository ppa:kubuntu-ppa/backports
 
 wget -qO - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
