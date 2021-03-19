@@ -6,6 +6,7 @@ sudo apt install -y \
   build-essential \
   code \
   curl \
+  flameshot \
   git \
   google-chrome-stable \
   kubuntu-desktop \
