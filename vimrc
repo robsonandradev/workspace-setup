@@ -163,8 +163,8 @@ autocmd FileType cpp,cxx,h,hpp,c :call GoCoc()
 let g:ale_fixers = {
  \ '*': ['trim_whitespace'],
  \ 'javascript': ['eslint'],
- \ 'python': ['pylint']
  \ }
+ "\ 'python': ['pylint']
 
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
