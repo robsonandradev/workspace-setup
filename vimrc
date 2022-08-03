@@ -1,13 +1,14 @@
-set number
+set nu rnu
 " set ignorecase
 
 syntax on
 
 set hidden
 set noerrorbells
-set tabstop=2 softtabstop=2
+set tabstop=2
+set softtabstop=2
 set shiftwidth=2
-set expandtab
+"set expandtab
 set smartindent
 " set nu
 " set nowrap
@@ -46,6 +47,8 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-tsserver',
+Plug 'fannheyward/coc-pyright'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
@@ -70,6 +73,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'hashivim/vim-terraform'
+Plug 'chr4/nginx.vim'
 
 call plug#end()
 
@@ -109,10 +113,10 @@ nmap <silent> gr <Plug>(coc-references)
 " Remap for rename current word
 nmap <F2> <Plug>(coc-rename)
 
-fun! GoYCM()
-    nnoremap <buffer> <silent> <leader>gd :YcmCompleter GoTo<CR>
-    nnoremap <buffer> <silent> <leader>gr :YcmCompleter GoToReferences<CR>
-endfun
+"fun! GoYCM()
+    "nnoremap <buffer> <silent> <leader>gd :YcmCompleter GoTo<CR>
+    "nnoremap <buffer> <silent> <leader>gr :YcmCompleter GoToReferences<CR>
+"endfun
 
 fun! GoCoc()
     inoremap <buffer> <silent><expr> <TAB>
@@ -142,8 +146,8 @@ let g:coc_global_extensions = [
   \ 'coc-pairs',
   \ 'coc-tsserver',
   \ 'coc-eslint',
-  \ 'coc-prettier',
   \ 'coc-json',
+  \ 'coc-pyright',
   \ ]
 
 fun! TrimWhitespace()
@@ -158,7 +162,8 @@ autocmd FileType cpp,cxx,h,hpp,c :call GoCoc()
 
 let g:ale_fixers = {
  \ '*': ['trim_whitespace'],
- \ 'javascript': ['eslint']
+ \ 'javascript': ['eslint'],
+ \ 'python': ['pylint']
  \ }
 
 let g:ale_sign_error = '❌'
@@ -187,3 +192,4 @@ endfunction
 
 " Highlight currently open buffer in NERDTree
 autocmd BufEnter * call SyncTree()
+let g:loaded_perl_provider = 0
