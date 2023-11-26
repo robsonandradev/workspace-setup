@@ -14,6 +14,7 @@ sudo apt install -y \
   linux-headers-generic \
   net-tools \
   nodejs \
+  ripgrep \
   software-properties-common \
   python3-pip \
   ubuntu-restricted-extras \
